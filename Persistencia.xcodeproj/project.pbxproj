@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF76C93418BBA88C003132A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF76C93318BBA88C003132A0 /* Foundation.framework */; };
+		CF76C93618BBA88C003132A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF76C93518BBA88C003132A0 /* CoreGraphics.framework */; };
+		CF76C93818BBA88C003132A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF76C93718BBA88C003132A0 /* UIKit.framework */; };
+		CF76C93A18BBA88C003132A0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF76C93918BBA88C003132A0 /* CoreData.framework */; };
+		CF76C94018BBA88C003132A0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF76C93E18BBA88C003132A0 /* InfoPlist.strings */; };
+		CF76C94218BBA88C003132A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF76C94118BBA88C003132A0 /* main.m */; };
+		CF76C94618BBA88C003132A0 /* PERAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF76C94518BBA88C003132A0 /* PERAppDelegate.m */; };
+		CF76C94918BBA88C003132A0 /* Persistencia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF76C94718BBA88C003132A0 /* Persistencia.xcdatamodeld */; };
+		CF76C94B18BBA88C003132A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF76C94A18BBA88C003132A0 /* Images.xcassets */; };
+		CF76C95218BBA88C003132A0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF76C95118BBA88C003132A0 /* XCTest.framework */; };
+		CF76C95318BBA88C003132A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF76C93318BBA88C003132A0 /* Foundation.framework */; };
+		CF76C95418BBA88C003132A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF76C93718BBA88C003132A0 /* UIKit.framework */; };
+		CF76C95518BBA88C003132A0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF76C93918BBA88C003132A0 /* CoreData.framework */; };
+		CF76C95D18BBA88C003132A0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF76C95B18BBA88C003132A0 /* InfoPlist.strings */; };
+		CF76C95F18BBA88C003132A0 /* PersistenciaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF76C95E18BBA88C003132A0 /* PersistenciaTests.m */; };
+		CF76C96918BBA8AE003132A0 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF76C96818BBA8AE003132A0 /* Storyboard.storyboard */; };
+		CF76C96C18BBAA61003132A0 /* PERLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF76C96B18BBAA61003132A0 /* PERLoginViewController.m */; };
+		CF76C99A18BBAF70003132A0 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CF76C99918BBAF70003132A0 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CF76C99D18BBB78E003132A0 /* Categorias.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF76C99C18BBB78E003132A0 /* Categorias.plist */; };
+		CFC6230518BBC4150021A5E6 /* PERListaDeTarefasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC6230418BBC4150021A5E6 /* PERListaDeTarefasViewController.m */; };
+		CFC6230818BBC8C10021A5E6 /* PERAdicionarTarefasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC6230718BBC8C10021A5E6 /* PERAdicionarTarefasViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF76C95618BBA88C003132A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF76C92818BBA88B003132A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF76C92F18BBA88B003132A0;
+			remoteInfo = Persistencia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF76C93018BBA88C003132A0 /* Persistencia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Persistencia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF76C93318BBA88C003132A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CF76C93518BBA88C003132A0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CF76C93718BBA88C003132A0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CF76C93918BBA88C003132A0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CF76C93D18BBA88C003132A0 /* Persistencia-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Persistencia-Info.plist"; sourceTree = "<group>"; };
+		CF76C93F18BBA88C003132A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CF76C94118BBA88C003132A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF76C94318BBA88C003132A0 /* Persistencia-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Persistencia-Prefix.pch"; sourceTree = "<group>"; };
+		CF76C94418BBA88C003132A0 /* PERAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PERAppDelegate.h; sourceTree = "<group>"; };
+		CF76C94518BBA88C003132A0 /* PERAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PERAppDelegate.m; sourceTree = "<group>"; };
+		CF76C94818BBA88C003132A0 /* Persistencia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Persistencia.xcdatamodel; sourceTree = "<group>"; };
+		CF76C94A18BBA88C003132A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CF76C95018BBA88C003132A0 /* PersistenciaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersistenciaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF76C95118BBA88C003132A0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CF76C95A18BBA88C003132A0 /* PersistenciaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PersistenciaTests-Info.plist"; sourceTree = "<group>"; };
+		CF76C95C18BBA88C003132A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CF76C95E18BBA88C003132A0 /* PersistenciaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersistenciaTests.m; sourceTree = "<group>"; };
+		CF76C96818BBA8AE003132A0 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		CF76C96A18BBAA61003132A0 /* PERLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PERLoginViewController.h; sourceTree = "<group>"; };
+		CF76C96B18BBAA61003132A0 /* PERLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PERLoginViewController.m; sourceTree = "<group>"; };
+		CF76C99818BBAF70003132A0 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeychainItemWrapper.h; path = ../KeychainItemWrapper.h; sourceTree = "<group>"; };
+		CF76C99918BBAF70003132A0 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeychainItemWrapper.m; path = ../KeychainItemWrapper.m; sourceTree = "<group>"; };
+		CF76C99C18BBB78E003132A0 /* Categorias.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Categorias.plist; sourceTree = "<group>"; };
+		CFC6230318BBC4150021A5E6 /* PERListaDeTarefasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PERListaDeTarefasViewController.h; sourceTree = "<group>"; };
+		CFC6230418BBC4150021A5E6 /* PERListaDeTarefasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PERListaDeTarefasViewController.m; sourceTree = "<group>"; };
+		CFC6230618BBC8C10021A5E6 /* PERAdicionarTarefasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PERAdicionarTarefasViewController.h; sourceTree = "<group>"; };
+		CFC6230718BBC8C10021A5E6 /* PERAdicionarTarefasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PERAdicionarTarefasViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF76C92D18BBA88B003132A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF76C93618BBA88C003132A0 /* CoreGraphics.framework in Frameworks */,
+				CF76C93A18BBA88C003132A0 /* CoreData.framework in Frameworks */,
+				CF76C93818BBA88C003132A0 /* UIKit.framework in Frameworks */,
+				CF76C93418BBA88C003132A0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF76C94D18BBA88C003132A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF76C95218BBA88C003132A0 /* XCTest.framework in Frameworks */,
+				CF76C95518BBA88C003132A0 /* CoreData.framework in Frameworks */,
+				CF76C95418BBA88C003132A0 /* UIKit.framework in Frameworks */,
+				CF76C95318BBA88C003132A0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF76C92718BBA88B003132A0 = {
+			isa = PBXGroup;
+			children = (
+				CF76C93B18BBA88C003132A0 /* Persistencia */,
+				CF76C95818BBA88C003132A0 /* PersistenciaTests */,
+				CF76C93218BBA88C003132A0 /* Frameworks */,
+				CF76C93118BBA88C003132A0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF76C93118BBA88C003132A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF76C93018BBA88C003132A0 /* Persistencia.app */,
+				CF76C95018BBA88C003132A0 /* PersistenciaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF76C93218BBA88C003132A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF76C93318BBA88C003132A0 /* Foundation.framework */,
+				CF76C93518BBA88C003132A0 /* CoreGraphics.framework */,
+				CF76C93718BBA88C003132A0 /* UIKit.framework */,
+				CF76C93918BBA88C003132A0 /* CoreData.framework */,
+				CF76C95118BBA88C003132A0 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF76C93B18BBA88C003132A0 /* Persistencia */ = {
+			isa = PBXGroup;
+			children = (
+				CF76C96818BBA8AE003132A0 /* Storyboard.storyboard */,
+				CFC6230618BBC8C10021A5E6 /* PERAdicionarTarefasViewController.h */,
+				CFC6230718BBC8C10021A5E6 /* PERAdicionarTarefasViewController.m */,
+				CFC6230318BBC4150021A5E6 /* PERListaDeTarefasViewController.h */,
+				CFC6230418BBC4150021A5E6 /* PERListaDeTarefasViewController.m */,
+				CF76C96A18BBAA61003132A0 /* PERLoginViewController.h */,
+				CF76C96B18BBAA61003132A0 /* PERLoginViewController.m */,
+				CF76C94418BBA88C003132A0 /* PERAppDelegate.h */,
+				CF76C94518BBA88C003132A0 /* PERAppDelegate.m */,
+				CF76C94A18BBA88C003132A0 /* Images.xcassets */,
+				CF76C94718BBA88C003132A0 /* Persistencia.xcdatamodeld */,
+				CF76C93C18BBA88C003132A0 /* Supporting Files */,
+			);
+			path = Persistencia;
+			sourceTree = "<group>";
+		};
+		CF76C93C18BBA88C003132A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF76C99B18BBAF7A003132A0 /* Keychain */,
+				CF76C93D18BBA88C003132A0 /* Persistencia-Info.plist */,
+				CF76C99C18BBB78E003132A0 /* Categorias.plist */,
+				CF76C93E18BBA88C003132A0 /* InfoPlist.strings */,
+				CF76C94118BBA88C003132A0 /* main.m */,
+				CF76C94318BBA88C003132A0 /* Persistencia-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF76C95818BBA88C003132A0 /* PersistenciaTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF76C95E18BBA88C003132A0 /* PersistenciaTests.m */,
+				CF76C95918BBA88C003132A0 /* Supporting Files */,
+			);
+			path = PersistenciaTests;
+			sourceTree = "<group>";
+		};
+		CF76C95918BBA88C003132A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF76C95A18BBA88C003132A0 /* PersistenciaTests-Info.plist */,
+				CF76C95B18BBA88C003132A0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF76C99B18BBAF7A003132A0 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				CF76C99818BBAF70003132A0 /* KeychainItemWrapper.h */,
+				CF76C99918BBAF70003132A0 /* KeychainItemWrapper.m */,
+			);
+			name = Keychain;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF76C92F18BBA88B003132A0 /* Persistencia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF76C96218BBA88C003132A0 /* Build configuration list for PBXNativeTarget "Persistencia" */;
+			buildPhases = (
+				CF76C92C18BBA88B003132A0 /* Sources */,
+				CF76C92D18BBA88B003132A0 /* Frameworks */,
+				CF76C92E18BBA88B003132A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Persistencia;
+			productName = Persistencia;
+			productReference = CF76C93018BBA88C003132A0 /* Persistencia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF76C94F18BBA88C003132A0 /* PersistenciaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF76C96518BBA88C003132A0 /* Build configuration list for PBXNativeTarget "PersistenciaTests" */;
+			buildPhases = (
+				CF76C94C18BBA88C003132A0 /* Sources */,
+				CF76C94D18BBA88C003132A0 /* Frameworks */,
+				CF76C94E18BBA88C003132A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF76C95718BBA88C003132A0 /* PBXTargetDependency */,
+			);
+			name = PersistenciaTests;
+			productName = PersistenciaTests;
+			productReference = CF76C95018BBA88C003132A0 /* PersistenciaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF76C92818BBA88B003132A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PER;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "João Pedro Cappelletto D'Agnoluzzo";
+				TargetAttributes = {
+					CF76C94F18BBA88C003132A0 = {
+						TestTargetID = CF76C92F18BBA88B003132A0;
+					};
+				};
+			};
+			buildConfigurationList = CF76C92B18BBA88B003132A0 /* Build configuration list for PBXProject "Persistencia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF76C92718BBA88B003132A0;
+			productRefGroup = CF76C93118BBA88C003132A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF76C92F18BBA88B003132A0 /* Persistencia */,
+				CF76C94F18BBA88C003132A0 /* PersistenciaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF76C92E18BBA88B003132A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF76C99D18BBB78E003132A0 /* Categorias.plist in Resources */,
+				CF76C94018BBA88C003132A0 /* InfoPlist.strings in Resources */,
+				CF76C94B18BBA88C003132A0 /* Images.xcassets in Resources */,
+				CF76C96918BBA8AE003132A0 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF76C94E18BBA88C003132A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF76C95D18BBA88C003132A0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF76C92C18BBA88B003132A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFC6230518BBC4150021A5E6 /* PERListaDeTarefasViewController.m in Sources */,
+				CF76C94618BBA88C003132A0 /* PERAppDelegate.m in Sources */,
+				CF76C94218BBA88C003132A0 /* main.m in Sources */,
+				CF76C96C18BBAA61003132A0 /* PERLoginViewController.m in Sources */,
+				CFC6230818BBC8C10021A5E6 /* PERAdicionarTarefasViewController.m in Sources */,
+				CF76C99A18BBAF70003132A0 /* KeychainItemWrapper.m in Sources */,
+				CF76C94918BBA88C003132A0 /* Persistencia.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF76C94C18BBA88C003132A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF76C95F18BBA88C003132A0 /* PersistenciaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF76C95718BBA88C003132A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF76C92F18BBA88B003132A0 /* Persistencia */;
+			targetProxy = CF76C95618BBA88C003132A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF76C93E18BBA88C003132A0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF76C93F18BBA88C003132A0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CF76C95B18BBA88C003132A0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF76C95C18BBA88C003132A0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF76C96018BBA88C003132A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CF76C96118BBA88C003132A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF76C96318BBA88C003132A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Persistencia/Persistencia-Prefix.pch";
+				INFOPLIST_FILE = "Persistencia/Persistencia-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CF76C96418BBA88C003132A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Persistencia/Persistencia-Prefix.pch";
+				INFOPLIST_FILE = "Persistencia/Persistencia-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CF76C96618BBA88C003132A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Persistencia.app/Persistencia";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Persistencia/Persistencia-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PersistenciaTests/PersistenciaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CF76C96718BBA88C003132A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Persistencia.app/Persistencia";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Persistencia/Persistencia-Prefix.pch";
+				INFOPLIST_FILE = "PersistenciaTests/PersistenciaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF76C92B18BBA88B003132A0 /* Build configuration list for PBXProject "Persistencia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF76C96018BBA88C003132A0 /* Debug */,
+				CF76C96118BBA88C003132A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF76C96218BBA88C003132A0 /* Build configuration list for PBXNativeTarget "Persistencia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF76C96318BBA88C003132A0 /* Debug */,
+				CF76C96418BBA88C003132A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF76C96518BBA88C003132A0 /* Build configuration list for PBXNativeTarget "PersistenciaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF76C96618BBA88C003132A0 /* Debug */,
+				CF76C96718BBA88C003132A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CF76C94718BBA88C003132A0 /* Persistencia.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CF76C94818BBA88C003132A0 /* Persistencia.xcdatamodel */,
+			);
+			currentVersion = CF76C94818BBA88C003132A0 /* Persistencia.xcdatamodel */;
+			path = Persistencia.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CF76C92818BBA88B003132A0 /* Project object */;
+}
