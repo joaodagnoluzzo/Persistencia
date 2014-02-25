@@ -7,10 +7,10 @@
 //
 
 #import "PERListaDeTarefasViewController.h"
+#import "PERAdicionarTarefasViewController.h"
 
 @interface PERListaDeTarefasViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @end
 
 @implementation PERListaDeTarefasViewController
@@ -28,6 +28,33 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+
+- (IBAction)addAction:(UIButton *)sender {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+    
+    PERAdicionarTarefasViewController *pavc = (PERAdicionarTarefasViewController *)[storyboard instantiateViewControllerWithIdentifier:@"adicionarTarefas"];
+   
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didAddTask:) name:@"TaskHasBeenAdded" object:nil];
+    
+    
+    [self presentViewController:pavc animated:YES completion:nil];
+    
+}
+
+-(void)didAddTask:(NSNotification *)notification{
+    
+    if(![self.presentedViewController isBeingDismissed]){
+        [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+
+- (IBAction)logoffAction:(UIButton *)sender {
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"Logoff" object:self];
+    
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
