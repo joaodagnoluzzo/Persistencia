@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Buq-YE-eNP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Buq-YE-eNP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -61,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y84-Bx-2QD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-127" y="48"/>
+            <point key="canvasLocation" x="-125" y="454"/>
         </scene>
         <!--Lista De Tarefas View Controller - listaDeTarefas-->
         <scene sceneID="uAT-Ba-CF4">
@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="2" rowHeight="46" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="39p-iX-vdA">
-                                <rect key="frame" x="15" y="54" width="285" height="494"/>
+                                <rect key="frame" x="15" y="54" width="285" height="468"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -144,6 +144,16 @@
                                     <action selector="logoffAction:" destination="Pnm-mC-WMZ" eventType="touchUpInside" id="KDZ-4g-TMv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfc-0t-zzh">
+                                <rect key="frame" x="118" y="530" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Customizar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="customizeAction:" destination="Pnm-mC-WMZ" eventType="touchUpInside" id="94X-CO-f0u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -152,7 +162,7 @@
                             <constraint firstItem="bH3-dx-2kx" firstAttribute="leading" secondItem="MWG-hc-PxW" secondAttribute="leading" constant="130" id="Ftd-vH-UdD"/>
                             <constraint firstAttribute="trailing" secondItem="39p-iX-vdA" secondAttribute="trailing" constant="20" id="HPi-P9-EUC"/>
                             <constraint firstItem="39p-iX-vdA" firstAttribute="top" secondItem="haz-Hu-bL1" secondAttribute="bottom" constant="3" id="Svm-wP-0JC"/>
-                            <constraint firstAttribute="bottom" secondItem="39p-iX-vdA" secondAttribute="bottom" constant="20" id="ate-tS-ETn"/>
+                            <constraint firstAttribute="bottom" secondItem="39p-iX-vdA" secondAttribute="bottom" constant="46" id="ate-tS-ETn"/>
                             <constraint firstItem="bH3-dx-2kx" firstAttribute="top" secondItem="Azb-SI-F4w" secondAttribute="bottom" constant="10" id="cIm-W3-aNX"/>
                             <constraint firstItem="39p-iX-vdA" firstAttribute="leading" secondItem="MWG-hc-PxW" secondAttribute="leading" constant="15" id="nD8-cN-QRg"/>
                             <constraint firstItem="39p-iX-vdA" firstAttribute="top" secondItem="bH3-dx-2kx" secondAttribute="bottom" constant="3" id="rO8-kY-xX7"/>
@@ -166,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3A-ZC-otR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298" y="48"/>
+            <point key="canvasLocation" x="300" y="454"/>
         </scene>
         <!--Adicionar Tarefas View Controller-->
         <scene sceneID="eSc-6w-xTU">
@@ -231,7 +241,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1n-2V-Ne0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702" y="48"/>
+            <point key="canvasLocation" x="838" y="98"/>
+        </scene>
+        <!--Configuracoes View Controller-->
+        <scene sceneID="crp-f8-iSj">
+            <objects>
+                <viewController storyboardIdentifier="configuracoes" id="2x4-72-yVd" customClass="PERConfiguracoesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bPi-Yd-FXO"/>
+                        <viewControllerLayoutGuide type="bottom" id="pB5-MB-ZlU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YaJ-q6-VOM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faT-x6-P4l">
+                                <rect key="frame" x="15" y="26" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Concluído">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="concluidoAction:" destination="2x4-72-yVd" eventType="touchUpInside" id="rqN-lb-6uv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Configurações" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4y-wC-awf">
+                                <rect key="frame" x="104" y="30" width="112" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Ed-Bw-dYe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1k3-vD-7Hy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="793"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

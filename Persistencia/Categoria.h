@@ -2,7 +2,7 @@
 //  Categoria.h
 //  Persistencia
 //
-//  Created by Admin on 25/02/14.
+//  Created by João Pedro Cappelletto D'Agnoluzzo on 2/25/14.
 //  Copyright (c) 2014 João Pedro Cappelletto D'Agnoluzzo. All rights reserved.
 //
 
@@ -13,15 +13,15 @@
 
 @interface Categoria : NSManagedObject
 
-@property (nonatomic, retain) NSString * nomeCategoria;
-@property (nonatomic, retain) NSSet *tarefaCategoria;
+@property (nonatomic, retain) NSString * nome;
+@property (nonatomic, retain) NSSet *tarefa;
 @end
 
 @interface Categoria (CoreDataGeneratedAccessors)
 
-- (void)addTarefaCategoriaObject:(Tarefa *)value;
-- (void)removeTarefaCategoriaObject:(Tarefa *)value;
-- (void)addTarefaCategoria:(NSSet *)values;
-- (void)removeTarefaCategoria:(NSSet *)values;
+- (void)addTarefaObject:(Tarefa *)value;
+- (void)removeTarefaObject:(Tarefa *)value;
+- (void)addTarefa:(NSSet *)values;
+- (void)removeTarefa:(NSSet *)values;
 
 @end

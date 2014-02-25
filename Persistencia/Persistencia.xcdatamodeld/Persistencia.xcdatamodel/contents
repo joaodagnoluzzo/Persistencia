@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="12E55" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Categoria" representedClassName="Categoria" syncable="YES">
-        <attribute name="nomeCategoria" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="tarefaCategoria" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tarefa" inverseName="tarefaCategoria" inverseEntity="Tarefa" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tarefa" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tarefa" inverseName="daCategoria" inverseEntity="Tarefa" syncable="YES"/>
     </entity>
     <entity name="Tarefa" representedClassName="Tarefa" syncable="YES">
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nomeCategoria" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="tarefaCategoria" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categoria" inverseName="tarefaCategoria" inverseEntity="Categoria" syncable="YES"/>
+        <relationship name="daCategoria" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categoria" inverseName="tarefa" inverseEntity="Categoria" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Tarefa" positionX="72" positionY="173" width="128" height="88"/>
-        <element name="Categoria" positionX="349" positionY="189" width="128" height="73"/>
+        <element name="Categoria" positionX="322" positionY="189" width="128" height="73"/>
+        <element name="Tarefa" positionX="72" positionY="189" width="128" height="73"/>
     </elements>
 </model>

@@ -1,18 +1,13 @@
 //
-//  Tarefa.m
+//  PERConfiguracoesViewController.h
 //  Persistencia
 //
 //  Created by João Pedro Cappelletto D'Agnoluzzo on 2/25/14.
 //  Copyright (c) 2014 João Pedro Cappelletto D'Agnoluzzo. All rights reserved.
 //
 
-#import "Tarefa.h"
-#import "Categoria.h"
+#import <UIKit/UIKit.h>
 
-
-@implementation Tarefa
-
-@dynamic nome;
-@dynamic daCategoria;
+@interface PERConfiguracoesViewController : UIViewController
 
 @end

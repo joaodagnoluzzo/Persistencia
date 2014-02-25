@@ -7,13 +7,16 @@
 //
 
 #import "PERAdicionarTarefasViewController.h"
+#import "PERAppDelegate.h"
+#import "Categoria.h"
+#import "Tarefa.h"
 
 @interface PERAdicionarTarefasViewController ()
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldTarefa;
 @property NSArray *categorias;
-@property NSDictionary *dictionary;
 @property NSString *selectedCategory;
+@property NSManagedObjectContext *context;
 
 @end
 
@@ -32,24 +35,64 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+  
+    self.categorias = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Categorias" ofType:@"plist"]];
     
-    self.dictionary = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Categorias" ofType:@"plist"]];
     
-    self.categorias = [[NSArray alloc]initWithArray:self.dictionary.allKeys copyItems:YES];
-    
-
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
    
     [self.view addGestureRecognizer:tap];
     
 }
 
-- (IBAction)doneAction:(UIButton *)sender {
 
-    //falta adicionar na lista
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    self.selectedCategory = [self pickerView:self.pickerView titleForRow:0 forComponent:0];
+    NSLog(@"%@",self.selectedCategory);
+}
+
+- (IBAction)doneAction:(UIButton *)sender {
+    
+    
+    if([[self.txtFieldTarefa text] length]==0){
+        UIAlertView *alertUser = [[UIAlertView alloc] initWithTitle: @"Aviso"
+                                                            message: @"Dê um nome a sua tarefa!"
+                                                           delegate: nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [alertUser show];
+    
+    }else{
+    
+    self.context = [(PERAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    
+    Tarefa *newTask = (Tarefa *)[NSEntityDescription insertNewObjectForEntityForName:@"Tarefa"
+                                                                         inManagedObjectContext:self.context];
+    
+    Categoria *newCategoria = (Categoria *)[NSEntityDescription insertNewObjectForEntityForName:@"Categoria" inManagedObjectContext:self.context];
+    
+    newCategoria.nome = self.selectedCategory;
+  
+    newTask.nome = [self.txtFieldTarefa text];
+    newTask.daCategoria = newCategoria;
+    
+    
+    // Salva o Contexto
+	NSError *error;
+    if (![self.context save:&error])
+	{
+		NSLog(@"Erro ao salvar: %@", [error localizedDescription]);
+	}
+	else
+	{
+		NSLog(@"Salvo com sucesso!");
+	}
+    
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"TaskHasBeenAdded" object:self];
-    
+    }
 }
 
 - (IBAction)voltarAction:(UIButton *)sender {
@@ -83,7 +126,6 @@
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
 
-    
     return [self.categorias objectAtIndex:row];
     
 }
@@ -94,6 +136,7 @@
 {
     
     self.selectedCategory = [self pickerView:self.pickerView titleForRow:row forComponent:0];
+    NSLog(@"%@",self.selectedCategory);
     
 }
 

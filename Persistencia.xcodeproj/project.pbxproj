@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		841DAF2918BC465D00109862 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DAF2818BC465D00109862 /* Categoria.m */; };
-		841DAF2C18BC465D00109862 /* Tarefa.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DAF2B18BC465D00109862 /* Tarefa.m */; };
 		CF76C93418BBA88C003132A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF76C93318BBA88C003132A0 /* Foundation.framework */; };
 		CF76C93618BBA88C003132A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF76C93518BBA88C003132A0 /* CoreGraphics.framework */; };
 		CF76C93818BBA88C003132A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF76C93718BBA88C003132A0 /* UIKit.framework */; };
@@ -30,6 +28,9 @@
 		CF76C99D18BBB78E003132A0 /* Categorias.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF76C99C18BBB78E003132A0 /* Categorias.plist */; };
 		CFC6230518BBC4150021A5E6 /* PERListaDeTarefasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC6230418BBC4150021A5E6 /* PERListaDeTarefasViewController.m */; };
 		CFC6230818BBC8C10021A5E6 /* PERAdicionarTarefasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC6230718BBC8C10021A5E6 /* PERAdicionarTarefasViewController.m */; };
+		CFF1997218BCFC6C00BD11BF /* PERConfiguracoesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF1997118BCFC6C00BD11BF /* PERConfiguracoesViewController.m */; };
+		CFF1997B18BD0D1000BD11BF /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF1997A18BD0D1000BD11BF /* Categoria.m */; };
+		CFF1997E18BD0D1000BD11BF /* Tarefa.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF1997D18BD0D1000BD11BF /* Tarefa.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		841DAF2718BC465D00109862 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
-		841DAF2818BC465D00109862 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
-		841DAF2A18BC465D00109862 /* Tarefa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tarefa.h; sourceTree = "<group>"; };
-		841DAF2B18BC465D00109862 /* Tarefa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tarefa.m; sourceTree = "<group>"; };
 		CF76C93018BBA88C003132A0 /* Persistencia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Persistencia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF76C93318BBA88C003132A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CF76C93518BBA88C003132A0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -75,6 +72,12 @@
 		CFC6230418BBC4150021A5E6 /* PERListaDeTarefasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PERListaDeTarefasViewController.m; sourceTree = "<group>"; };
 		CFC6230618BBC8C10021A5E6 /* PERAdicionarTarefasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PERAdicionarTarefasViewController.h; sourceTree = "<group>"; };
 		CFC6230718BBC8C10021A5E6 /* PERAdicionarTarefasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PERAdicionarTarefasViewController.m; sourceTree = "<group>"; };
+		CFF1997018BCFC6C00BD11BF /* PERConfiguracoesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PERConfiguracoesViewController.h; sourceTree = "<group>"; };
+		CFF1997118BCFC6C00BD11BF /* PERConfiguracoesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PERConfiguracoesViewController.m; sourceTree = "<group>"; };
+		CFF1997918BD0D1000BD11BF /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
+		CFF1997A18BD0D1000BD11BF /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
+		CFF1997C18BD0D1000BD11BF /* Tarefa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tarefa.h; sourceTree = "<group>"; };
+		CFF1997D18BD0D1000BD11BF /* Tarefa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tarefa.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +109,11 @@
 		841DAF2D18BC466F00109862 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				841DAF2A18BC465D00109862 /* Tarefa.h */,
-				841DAF2B18BC465D00109862 /* Tarefa.m */,
-				841DAF2718BC465D00109862 /* Categoria.h */,
-				841DAF2818BC465D00109862 /* Categoria.m */,
+				CF76C94718BBA88C003132A0 /* Persistencia.xcdatamodeld */,
+				CFF1997C18BD0D1000BD11BF /* Tarefa.h */,
+				CFF1997D18BD0D1000BD11BF /* Tarefa.m */,
+				CFF1997918BD0D1000BD11BF /* Categoria.h */,
+				CFF1997A18BD0D1000BD11BF /* Categoria.m */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -149,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				CF76C96818BBA8AE003132A0 /* Storyboard.storyboard */,
+				CFF1997018BCFC6C00BD11BF /* PERConfiguracoesViewController.h */,
+				CFF1997118BCFC6C00BD11BF /* PERConfiguracoesViewController.m */,
 				CFC6230618BBC8C10021A5E6 /* PERAdicionarTarefasViewController.h */,
 				CFC6230718BBC8C10021A5E6 /* PERAdicionarTarefasViewController.m */,
 				CFC6230318BBC4150021A5E6 /* PERListaDeTarefasViewController.h */,
@@ -158,7 +164,6 @@
 				CF76C94418BBA88C003132A0 /* PERAppDelegate.h */,
 				CF76C94518BBA88C003132A0 /* PERAppDelegate.m */,
 				CF76C94A18BBA88C003132A0 /* Images.xcassets */,
-				CF76C94718BBA88C003132A0 /* Persistencia.xcdatamodeld */,
 				CF76C93C18BBA88C003132A0 /* Supporting Files */,
 			);
 			path = Persistencia;
@@ -305,12 +310,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFC6230518BBC4150021A5E6 /* PERListaDeTarefasViewController.m in Sources */,
-				841DAF2C18BC465D00109862 /* Tarefa.m in Sources */,
+				CFF1997B18BD0D1000BD11BF /* Categoria.m in Sources */,
 				CF76C94618BBA88C003132A0 /* PERAppDelegate.m in Sources */,
 				CF76C94218BBA88C003132A0 /* main.m in Sources */,
+				CFF1997E18BD0D1000BD11BF /* Tarefa.m in Sources */,
 				CF76C96C18BBAA61003132A0 /* PERLoginViewController.m in Sources */,
 				CFC6230818BBC8C10021A5E6 /* PERAdicionarTarefasViewController.m in Sources */,
-				841DAF2918BC465D00109862 /* Categoria.m in Sources */,
+				CFF1997218BCFC6C00BD11BF /* PERConfiguracoesViewController.m in Sources */,
 				CF76C99A18BBAF70003132A0 /* KeychainItemWrapper.m in Sources */,
 				CF76C94918BBA88C003132A0 /* Persistencia.xcdatamodeld in Sources */,
 			);
