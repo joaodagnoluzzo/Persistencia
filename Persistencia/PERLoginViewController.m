@@ -45,6 +45,15 @@
     keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"LoginPersistencia" accessGroup:nil];
     
     
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"AutoLogin"]){
+        [self autoLogin];
+    }
 }
 
 
@@ -128,7 +137,22 @@
     
     
     [self presentViewController:plvc animated:YES completion:nil];
-  
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logoff) name:@"Logoff" object:nil];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"AutoLogin"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+}
+
+-(void)logoff{
+    
+    [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+    
+    [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"AutoLogin"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
 }
 
 - (void)didReceiveMemoryWarning
