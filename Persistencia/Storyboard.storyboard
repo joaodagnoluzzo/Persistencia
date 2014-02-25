@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Login View Controller - Item-->
         <scene sceneID="Czo-As-UI6">
             <objects>
                 <viewController id="Buq-YE-eNP" customClass="PERLoginViewController" sceneMemberID="viewController">
@@ -52,6 +52,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="UZJ-Eq-cTp"/>
                     <navigationItem key="navigationItem" id="SP3-1x-Ett"/>
                     <connections>
                         <outlet property="txtFieldSenha" destination="lNo-Pq-SUy" id="LdK-NV-6AN"/>
@@ -75,15 +76,15 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="2" rowHeight="46" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="39p-iX-vdA">
-                                <rect key="frame" x="0.0" y="54" width="320" height="462"/>
+                                <rect key="frame" x="15" y="54" width="285" height="494"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="69g-7G-YTG" detailTextLabel="0d8-Pg-Y7e" rowHeight="46" style="IBUITableViewCellStyleSubtitle" id="jkg-Kl-e2h">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="22" width="285" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jkg-Kl-e2h" id="y4T-0M-fMv">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="285" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="69g-7G-YTG">
@@ -149,14 +150,15 @@
                             <constraint firstItem="haz-Hu-bL1" firstAttribute="top" secondItem="MWG-hc-PxW" secondAttribute="top" constant="25" id="Bsj-Lt-ITS"/>
                             <constraint firstAttribute="trailing" secondItem="haz-Hu-bL1" secondAttribute="trailing" constant="20" symbolic="YES" id="Dhv-kl-53Y"/>
                             <constraint firstItem="bH3-dx-2kx" firstAttribute="leading" secondItem="MWG-hc-PxW" secondAttribute="leading" constant="130" id="Ftd-vH-UdD"/>
-                            <constraint firstAttribute="trailing" secondItem="39p-iX-vdA" secondAttribute="trailing" id="HPi-P9-EUC"/>
+                            <constraint firstAttribute="trailing" secondItem="39p-iX-vdA" secondAttribute="trailing" constant="20" id="HPi-P9-EUC"/>
                             <constraint firstItem="39p-iX-vdA" firstAttribute="top" secondItem="haz-Hu-bL1" secondAttribute="bottom" constant="3" id="Svm-wP-0JC"/>
-                            <constraint firstAttribute="bottom" secondItem="39p-iX-vdA" secondAttribute="bottom" constant="52" id="ate-tS-ETn"/>
+                            <constraint firstAttribute="bottom" secondItem="39p-iX-vdA" secondAttribute="bottom" constant="20" id="ate-tS-ETn"/>
                             <constraint firstItem="bH3-dx-2kx" firstAttribute="top" secondItem="Azb-SI-F4w" secondAttribute="bottom" constant="10" id="cIm-W3-aNX"/>
-                            <constraint firstItem="39p-iX-vdA" firstAttribute="leading" secondItem="MWG-hc-PxW" secondAttribute="leading" id="nD8-cN-QRg"/>
+                            <constraint firstItem="39p-iX-vdA" firstAttribute="leading" secondItem="MWG-hc-PxW" secondAttribute="leading" constant="15" id="nD8-cN-QRg"/>
                             <constraint firstItem="39p-iX-vdA" firstAttribute="top" secondItem="bH3-dx-2kx" secondAttribute="bottom" constant="3" id="rO8-kY-xX7"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="9M8-72-ETr"/>
                     <navigationItem key="navigationItem" id="q4G-U1-rEd"/>
                     <connections>
                         <outlet property="tableView" destination="39p-iX-vdA" id="cOi-fS-f4Z"/>

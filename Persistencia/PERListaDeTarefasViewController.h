@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PERListaDeTarefasViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface PERListaDeTarefasViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITabBarDelegate>
 
 @end

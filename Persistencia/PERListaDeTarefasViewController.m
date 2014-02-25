@@ -11,7 +11,6 @@
 
 @interface PERListaDeTarefasViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @end
 
 @implementation PERListaDeTarefasViewController
@@ -42,6 +41,7 @@
     
     
     [self presentViewController:pavc animated:YES completion:nil];
+    
 }
 
 -(void)didAddTask:(NSNotification *)notification{
