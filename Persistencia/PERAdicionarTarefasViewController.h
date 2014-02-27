@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface PERAdicionarTarefasViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface PERAdicionarTarefasViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, MKMapViewDelegate, UIAlertViewDelegate>
 
 @end

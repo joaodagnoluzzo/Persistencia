@@ -97,8 +97,9 @@
 
 - (void)didFinishedCustomizing{
     
-    [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
-
+    if(![self.presentedViewController isBeingDismissed]){
+        [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (IBAction)logoffAction:(UIButton *)sender {

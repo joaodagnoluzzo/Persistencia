@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF6C406D18BFB37B00B50F64 /* PERMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6C406C18BFB37B00B50F64 /* PERMapViewController.m */; };
+		CF6C406F18BFB50700B50F64 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6C406E18BFB50700B50F64 /* MapKit.framework */; };
 		CF76C93418BBA88C003132A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF76C93318BBA88C003132A0 /* Foundation.framework */; };
 		CF76C93618BBA88C003132A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF76C93518BBA88C003132A0 /* CoreGraphics.framework */; };
 		CF76C93818BBA88C003132A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF76C93718BBA88C003132A0 /* UIKit.framework */; };
@@ -44,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF6C406B18BFB37B00B50F64 /* PERMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PERMapViewController.h; sourceTree = "<group>"; };
+		CF6C406C18BFB37B00B50F64 /* PERMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PERMapViewController.m; sourceTree = "<group>"; };
+		CF6C406E18BFB50700B50F64 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CF76C93018BBA88C003132A0 /* Persistencia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Persistencia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF76C93318BBA88C003132A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CF76C93518BBA88C003132A0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6C406F18BFB50700B50F64 /* MapKit.framework in Frameworks */,
 				CF76C93618BBA88C003132A0 /* CoreGraphics.framework in Frameworks */,
 				CF76C93A18BBA88C003132A0 /* CoreData.framework in Frameworks */,
 				CF76C93818BBA88C003132A0 /* UIKit.framework in Frameworks */,
@@ -140,6 +146,7 @@
 		CF76C93218BBA88C003132A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF6C406E18BFB50700B50F64 /* MapKit.framework */,
 				CF76C93318BBA88C003132A0 /* Foundation.framework */,
 				CF76C93518BBA88C003132A0 /* CoreGraphics.framework */,
 				CF76C93718BBA88C003132A0 /* UIKit.framework */,
@@ -153,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				CF76C96818BBA8AE003132A0 /* Storyboard.storyboard */,
+				CF6C406B18BFB37B00B50F64 /* PERMapViewController.h */,
+				CF6C406C18BFB37B00B50F64 /* PERMapViewController.m */,
 				CFF1997018BCFC6C00BD11BF /* PERConfiguracoesViewController.h */,
 				CFF1997118BCFC6C00BD11BF /* PERConfiguracoesViewController.m */,
 				CFC6230618BBC8C10021A5E6 /* PERAdicionarTarefasViewController.h */,
@@ -318,6 +327,7 @@
 				CFC6230818BBC8C10021A5E6 /* PERAdicionarTarefasViewController.m in Sources */,
 				CFF1997218BCFC6C00BD11BF /* PERConfiguracoesViewController.m in Sources */,
 				CF76C99A18BBAF70003132A0 /* KeychainItemWrapper.m in Sources */,
+				CF6C406D18BFB37B00B50F64 /* PERMapViewController.m in Sources */,
 				CF76C94918BBA88C003132A0 /* Persistencia.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

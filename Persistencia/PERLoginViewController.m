@@ -40,11 +40,11 @@
     
     
     
+    
+    
     self.txtFieldSenha.secureTextEntry = YES;
     
     keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"LoginPersistencia" accessGroup:nil];
-    
-    
     
 }
 
@@ -54,6 +54,19 @@
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"AutoLogin"]){
         [self autoLogin];
     }
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    UIWindow* window = [[UIApplication sharedApplication] keyWindow];
+    window.tintColor = [UIColor colorWithRed:[prefs floatForKey:@"Red"]/255 green:[prefs floatForKey:@"Green"]/255 blue:[prefs floatForKey:@"Blue"]/255 alpha:1.0];
+    
+    UIFont *fonte;
+    if([prefs integerForKey:@"TamFonte"] < 15){
+       fonte = [UIFont fontWithName:@"Helvetica Neue" size:15];
+    }
+    else{
+        fonte = [UIFont fontWithName:[prefs objectForKey:@"Fonte"] size:[prefs integerForKey:@"TamFonte"]];
+    }
+    [[UILabel appearance] setFont:fonte];
 }
 
 

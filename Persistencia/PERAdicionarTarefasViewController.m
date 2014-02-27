@@ -10,6 +10,8 @@
 #import "PERAppDelegate.h"
 #import "Categoria.h"
 #import "Tarefa.h"
+#import "PERMapViewController.h"
+#import <MapKit/MapKit.h>
 
 @interface PERAdicionarTarefasViewController ()
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
@@ -17,10 +19,16 @@
 @property NSArray *categorias;
 @property NSString *selectedCategory;
 @property NSManagedObjectContext *context;
-
+@property CLLocationCoordinate2D location;
+@property MKMapView * map;
+@property MKPointAnnotation *dropPin;
 @end
 
-@implementation PERAdicionarTarefasViewController
+@implementation PERAdicionarTarefasViewController{
+    
+    BOOL firstTimeRenderingMap;
+
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,7 +43,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-  
+    
     self.categorias = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Categorias" ofType:@"plist"]];
     
     
@@ -43,6 +51,9 @@
    
     [self.view addGestureRecognizer:tap];
     
+    firstTimeRenderingMap = YES;
+    self.map = [[MKMapView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.dropPin = [[MKPointAnnotation alloc] init];
 }
 
 
@@ -99,6 +110,84 @@
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"TaskHasBeenAdded" object:self];
     
+}
+
+- (IBAction)selecionarNoMapa:(id)sender {
+    
+    if([self.txtFieldTarefa isFirstResponder]){
+        [self.txtFieldTarefa resignFirstResponder];
+    }
+    
+    [self.view addSubview:self.map];
+    self.map.showsUserLocation = YES;
+    self.map.delegate = self;
+    
+    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPressGesture:)];
+    [self.map addGestureRecognizer:longPressGesture];
+    
+}
+
+- (void)handleLongPressGesture:(UIGestureRecognizer *)sender{
+    if (sender.state == UIGestureRecognizerStateEnded || sender.state == UIGestureRecognizerStateChanged)
+    {
+        [self.map removeGestureRecognizer:sender];
+    }
+    else
+    {
+        // Here we get the CGPoint for the touch and convert it to latitude and longitude coordinates to display on the map
+        CGPoint point = [sender locationInView:self.map];
+        CLLocationCoordinate2D locCoord = [self.map convertPoint:point toCoordinateFromView:self.map];
+        
+        // Then all you have to do is create the annotation and add it to the map
+        
+        self.dropPin.coordinate = CLLocationCoordinate2DMake(locCoord.latitude, locCoord.longitude);
+        [self.map addAnnotation:self.dropPin];
+        [self.map removeGestureRecognizer:sender];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Confirmação"
+                                                        message: @"Este é o local correto?"
+                                                       delegate: nil
+                                              cancelButtonTitle:@"Sim"
+                                              otherButtonTitles:@"Não",nil];
+        [alert show];
+        alert.delegate = self;
+    }
+
+}
+
+-(void)salvaLocalizacao{
+    self.location = CLLocationCoordinate2DMake(self.dropPin.coordinate.latitude, self.dropPin.coordinate.longitude);
+    [self.map removeFromSuperview];
+    [self.map removeAnnotation:self.dropPin];
+}
+
+-(void)liberaSelecao{
+    [self.map removeAnnotation:self.dropPin];
+    [self.map addGestureRecognizer:[[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPressGesture:)]];
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+//    if(buttonIndex == 0) [self salvaLocalizacao];
+    
+    switch (buttonIndex) {
+        case 0:
+            [self salvaLocalizacao];
+            break;
+        default:
+            [self liberaSelecao];
+            break;
+    }
+
+}
+
+
+
+-(void)mapViewDidFinishRenderingMap:(MKMapView *)mapView fullyRendered:(BOOL)fullyRendered{
+    if(firstTimeRenderingMap){
+        MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(self.map.userLocation.coordinate,1000, 1000);
+        [self.map setRegion:viewRegion animated:YES];
+        firstTimeRenderingMap = NO;
+    }
 }
 
 -(void)handleSingleTap:(UITapGestureRecognizer *)recognizer{
