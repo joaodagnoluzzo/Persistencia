@@ -9,8 +9,10 @@
 #import "PERListaDeTarefasViewController.h"
 #import "PERAdicionarTarefasViewController.h"
 #import "PERAppDelegate.h"
+#import "PERMapViewController.h"
 #import "Tarefa.h"
 #import "Categoria.h"
+#import "MSCellAccessory.h"
 
 @interface PERListaDeTarefasViewController ()
 
@@ -54,6 +56,17 @@
 	for (Tarefa *task in fetchedObjects){
         [self.data addObject:task];
     }
+    
+}
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self.tableView beginUpdates];
+    [self.tableView reloadRowsAtIndexPaths:[self.tableView indexPathsForVisibleRows] withRowAnimation:UITableViewRowAnimationNone];
+    [self.tableView endUpdates];
+
     
 }
 
@@ -129,6 +142,14 @@
     
     cell.textLabel.text = [[self.data objectAtIndex:indexPath.row] nome];
     cell.detailTextLabel.text = [[[self.data objectAtIndex:indexPath.row] daCategoria] nome];
+    UIColor *cor = [[UIApplication sharedApplication] keyWindow].tintColor;
+    
+    NSLog(@"%@",[[self.data objectAtIndex:indexPath.row] latitude]);
+    
+    [cell setAccessoryView:[MSCellAccessory accessoryWithType:FLAT_DISCLOSURE_INDICATOR color:cor]];
+    
+    
+    
     return cell;
 
 }
@@ -141,6 +162,54 @@
     self.fetchedObjects = [self.context executeFetchRequest:self.fetchRequest error:&error];
     self.error = error;
     
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if([[segue identifier] isEqualToString:@"gotoMapa"]){
+        
+        
+        PERMapViewController *pmvc = (PERMapViewController *)segue.destinationViewController;
+        
+        Tarefa *task = [self.data objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+        
+        
+        
+        NSLog(@"%@", task.nome);
+        NSLog(@"%d",[self.tableView indexPathForSelectedRow].row);
+        
+        NSLog(@"%f",task.latitude.doubleValue);
+        NSLog(@"%f",task.longitude.doubleValue);
+        
+        pmvc.taskLocation = CLLocationCoordinate2DMake(task.latitude.doubleValue, task.longitude.doubleValue);
+        pmvc.pinTitle = task.nome;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeMap) name:@"closeMap" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noLocation) name:@"noLocation" object:nil];
+        
+    }
+    
+}
+
+-(void)closeMap{
+    if(![self.presentedViewController isBeingDismissed]){
+        [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+
+-(void)noLocation{
+    if(![self.presentedViewController isBeingDismissed]){
+        [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Aviso"
+                                                        message: @"Não existe local para esta tarefa!"
+                                                       delegate: nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+
+    
+    }
 }
 
 -(void)removeItemAtIndexPath:(NSIndexPath *)indexPath{

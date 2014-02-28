@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13C64" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Categoria" representedClassName="Categoria" syncable="YES">
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="tarefa" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tarefa" inverseName="daCategoria" inverseEntity="Tarefa" syncable="YES"/>
     </entity>
     <entity name="Tarefa" representedClassName="Tarefa" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="daCategoria" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categoria" inverseName="tarefa" inverseEntity="Categoria" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Categoria" positionX="322" positionY="189" width="128" height="73"/>
-        <element name="Tarefa" positionX="72" positionY="189" width="128" height="73"/>
+        <element name="Categoria" positionX="322" positionY="158" width="128" height="73"/>
+        <element name="Tarefa" positionX="72" positionY="189" width="126" height="103"/>
     </elements>
 </model>

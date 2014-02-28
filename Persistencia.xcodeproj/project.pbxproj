@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF25409B18C0F987000386F1 /* Tarefa.m in Sources */ = {isa = PBXBuildFile; fileRef = CF25409A18C0F987000386F1 /* Tarefa.m */; };
+		CF25409E18C0F988000386F1 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = CF25409D18C0F988000386F1 /* Categoria.m */; };
+		CF2540A518C10D64000386F1 /* MSCellAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2540A218C10D64000386F1 /* MSCellAccessory.m */; };
+		CF2540A618C10D64000386F1 /* UIView+AccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2540A418C10D64000386F1 /* UIView+AccessViewController.m */; };
 		CF6C406D18BFB37B00B50F64 /* PERMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6C406C18BFB37B00B50F64 /* PERMapViewController.m */; };
 		CF6C406F18BFB50700B50F64 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6C406E18BFB50700B50F64 /* MapKit.framework */; };
 		CF76C93418BBA88C003132A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF76C93318BBA88C003132A0 /* Foundation.framework */; };
@@ -31,8 +35,6 @@
 		CFC6230518BBC4150021A5E6 /* PERListaDeTarefasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC6230418BBC4150021A5E6 /* PERListaDeTarefasViewController.m */; };
 		CFC6230818BBC8C10021A5E6 /* PERAdicionarTarefasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC6230718BBC8C10021A5E6 /* PERAdicionarTarefasViewController.m */; };
 		CFF1997218BCFC6C00BD11BF /* PERConfiguracoesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF1997118BCFC6C00BD11BF /* PERConfiguracoesViewController.m */; };
-		CFF1997B18BD0D1000BD11BF /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF1997A18BD0D1000BD11BF /* Categoria.m */; };
-		CFF1997E18BD0D1000BD11BF /* Tarefa.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF1997D18BD0D1000BD11BF /* Tarefa.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF25409918C0F987000386F1 /* Tarefa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tarefa.h; sourceTree = "<group>"; };
+		CF25409A18C0F987000386F1 /* Tarefa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tarefa.m; sourceTree = "<group>"; };
+		CF25409C18C0F988000386F1 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
+		CF25409D18C0F988000386F1 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
+		CF2540A118C10D64000386F1 /* MSCellAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCellAccessory.h; sourceTree = "<group>"; };
+		CF2540A218C10D64000386F1 /* MSCellAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCellAccessory.m; sourceTree = "<group>"; };
+		CF2540A318C10D64000386F1 /* UIView+AccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AccessViewController.h"; sourceTree = "<group>"; };
+		CF2540A418C10D64000386F1 /* UIView+AccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AccessViewController.m"; sourceTree = "<group>"; };
 		CF6C406B18BFB37B00B50F64 /* PERMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PERMapViewController.h; sourceTree = "<group>"; };
 		CF6C406C18BFB37B00B50F64 /* PERMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PERMapViewController.m; sourceTree = "<group>"; };
 		CF6C406E18BFB50700B50F64 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -79,10 +89,6 @@
 		CFC6230718BBC8C10021A5E6 /* PERAdicionarTarefasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PERAdicionarTarefasViewController.m; sourceTree = "<group>"; };
 		CFF1997018BCFC6C00BD11BF /* PERConfiguracoesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PERConfiguracoesViewController.h; sourceTree = "<group>"; };
 		CFF1997118BCFC6C00BD11BF /* PERConfiguracoesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PERConfiguracoesViewController.m; sourceTree = "<group>"; };
-		CFF1997918BD0D1000BD11BF /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
-		CFF1997A18BD0D1000BD11BF /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
-		CFF1997C18BD0D1000BD11BF /* Tarefa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tarefa.h; sourceTree = "<group>"; };
-		CFF1997D18BD0D1000BD11BF /* Tarefa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tarefa.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +122,32 @@
 			isa = PBXGroup;
 			children = (
 				CF76C94718BBA88C003132A0 /* Persistencia.xcdatamodeld */,
-				CFF1997C18BD0D1000BD11BF /* Tarefa.h */,
-				CFF1997D18BD0D1000BD11BF /* Tarefa.m */,
-				CFF1997918BD0D1000BD11BF /* Categoria.h */,
-				CFF1997A18BD0D1000BD11BF /* Categoria.m */,
+				CF25409918C0F987000386F1 /* Tarefa.h */,
+				CF25409A18C0F987000386F1 /* Tarefa.m */,
+				CF25409C18C0F988000386F1 /* Categoria.h */,
+				CF25409D18C0F988000386F1 /* Categoria.m */,
 			);
 			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		CF25409F18C10D3B000386F1 /* disclosure */ = {
+			isa = PBXGroup;
+			children = (
+				CF2540A018C10D64000386F1 /* MSCellAccessory */,
+			);
+			name = disclosure;
+			sourceTree = "<group>";
+		};
+		CF2540A018C10D64000386F1 /* MSCellAccessory */ = {
+			isa = PBXGroup;
+			children = (
+				CF2540A118C10D64000386F1 /* MSCellAccessory.h */,
+				CF2540A218C10D64000386F1 /* MSCellAccessory.m */,
+				CF2540A318C10D64000386F1 /* UIView+AccessViewController.h */,
+				CF2540A418C10D64000386F1 /* UIView+AccessViewController.m */,
+			);
+			name = MSCellAccessory;
+			path = "../../MSCellAccessory-master/MSCellAccessory";
 			sourceTree = "<group>";
 		};
 		CF76C92718BBA88B003132A0 = {
@@ -181,6 +207,7 @@
 		CF76C93C18BBA88C003132A0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF25409F18C10D3B000386F1 /* disclosure */,
 				841DAF2D18BC466F00109862 /* Core Data */,
 				CF76C99B18BBAF7A003132A0 /* Keychain */,
 				CF76C93D18BBA88C003132A0 /* Persistencia-Info.plist */,
@@ -319,16 +346,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFC6230518BBC4150021A5E6 /* PERListaDeTarefasViewController.m in Sources */,
-				CFF1997B18BD0D1000BD11BF /* Categoria.m in Sources */,
 				CF76C94618BBA88C003132A0 /* PERAppDelegate.m in Sources */,
+				CF2540A618C10D64000386F1 /* UIView+AccessViewController.m in Sources */,
 				CF76C94218BBA88C003132A0 /* main.m in Sources */,
-				CFF1997E18BD0D1000BD11BF /* Tarefa.m in Sources */,
 				CF76C96C18BBAA61003132A0 /* PERLoginViewController.m in Sources */,
+				CF2540A518C10D64000386F1 /* MSCellAccessory.m in Sources */,
+				CF25409B18C0F987000386F1 /* Tarefa.m in Sources */,
 				CFC6230818BBC8C10021A5E6 /* PERAdicionarTarefasViewController.m in Sources */,
 				CFF1997218BCFC6C00BD11BF /* PERConfiguracoesViewController.m in Sources */,
 				CF76C99A18BBAF70003132A0 /* KeychainItemWrapper.m in Sources */,
 				CF6C406D18BFB37B00B50F64 /* PERMapViewController.m in Sources */,
 				CF76C94918BBA88C003132A0 /* Persistencia.xcdatamodeld in Sources */,
+				CF25409E18C0F988000386F1 /* Categoria.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

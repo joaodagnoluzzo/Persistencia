@@ -62,6 +62,8 @@
     UIFont *fonte;
     if([prefs integerForKey:@"TamFonte"] < 15){
        fonte = [UIFont fontWithName:@"Helvetica Neue" size:15];
+        [prefs setInteger:15 forKey:@"TamFonte"];
+        [prefs setValue:@"Helvetica Neue" forKey:@"Fonte"];
     }
     else{
         fonte = [UIFont fontWithName:[prefs objectForKey:@"Fonte"] size:[prefs integerForKey:@"TamFonte"]];

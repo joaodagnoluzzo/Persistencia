@@ -22,6 +22,9 @@
 @property CLLocationCoordinate2D location;
 @property MKMapView * map;
 @property MKPointAnnotation *dropPin;
+@property (weak, nonatomic) IBOutlet UILabel *labelLocalizacao;
+@property (weak, nonatomic) IBOutlet UISwitch *switchLocalizacao;
+@property (weak, nonatomic) IBOutlet UIButton *voltarButton;
 @end
 
 @implementation PERAdicionarTarefasViewController{
@@ -56,12 +59,16 @@
     self.dropPin = [[MKPointAnnotation alloc] init];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [self.voltarButton setHidden:YES];
+
+}
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
     self.selectedCategory = [self pickerView:self.pickerView titleForRow:0 forComponent:0];
-    NSLog(@"%@",self.selectedCategory);
 }
 
 - (IBAction)doneAction:(UIButton *)sender {
@@ -89,7 +96,10 @@
     newTask.nome = [self.txtFieldTarefa text];
     newTask.daCategoria = newCategoria;
     
-    
+        
+    newTask.latitude = [[NSNumber alloc] initWithDouble:self.dropPin.coordinate.latitude];
+    newTask.longitude = [[NSNumber alloc] initWithDouble:self.dropPin.coordinate.longitude];
+        
     // Salva o Contexto
 	NSError *error;
     if (![self.context save:&error])
@@ -111,6 +121,12 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"TaskHasBeenAdded" object:self];
     
 }
+- (IBAction)closeMap:(UIButton *)sender {
+    [self.map removeFromSuperview];
+    [self.map removeAnnotation:self.dropPin];
+    [self.switchLocalizacao setOn:NO];
+    [self.voltarButton setHidden:YES];
+}
 
 - (IBAction)selecionarNoMapa:(id)sender {
     
@@ -118,12 +134,22 @@
         [self.txtFieldTarefa resignFirstResponder];
     }
     
-    [self.view addSubview:self.map];
-    self.map.showsUserLocation = YES;
-    self.map.delegate = self;
+    if(self.switchLocalizacao.isOn){
+        [self.view addSubview:self.map];
+        self.map.showsUserLocation = YES;
+        self.map.delegate = self;
+        [self.voltarButton setHidden:NO];
+        [self.view bringSubviewToFront:self.voltarButton];
     
     UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPressGesture:)];
     [self.map addGestureRecognizer:longPressGesture];
+    }else {
+        [self.switchLocalizacao setOn:NO animated:YES];
+        
+        self.dropPin.coordinate = CLLocationCoordinate2DMake(0, 0);
+        [self.labelLocalizacao setText:@"Selecionar localização?"];
+        
+    }
     
 }
 
@@ -158,6 +184,7 @@
     self.location = CLLocationCoordinate2DMake(self.dropPin.coordinate.latitude, self.dropPin.coordinate.longitude);
     [self.map removeFromSuperview];
     [self.map removeAnnotation:self.dropPin];
+    [self.labelLocalizacao setText:@"Localização salva!"];
 }
 
 -(void)liberaSelecao{

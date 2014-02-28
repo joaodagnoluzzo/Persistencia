@@ -10,7 +10,8 @@
 #import <MapKit/MapKit.h>
 
 @interface PERMapViewController : UIViewController <MKMapViewDelegate>
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
+@property CLLocationCoordinate2D taskLocation;
+@property NSString *pinTitle;
 
 @end

@@ -80,11 +80,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="69g-7G-YTG" detailTextLabel="0d8-Pg-Y7e" rowHeight="46" style="IBUITableViewCellStyleSubtitle" id="jkg-Kl-e2h">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="69g-7G-YTG" detailTextLabel="0d8-Pg-Y7e" rowHeight="46" style="IBUITableViewCellStyleSubtitle" id="jkg-Kl-e2h">
                                         <rect key="frame" x="0.0" y="22" width="285" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jkg-Kl-e2h" id="y4T-0M-fMv">
-                                            <rect key="frame" x="0.0" y="0.0" width="285" height="45"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="252" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="69g-7G-YTG">
@@ -103,6 +103,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="2qU-Hk-czx" kind="modal" identifier="gotoMapa" id="IYn-RS-OJ2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -245,12 +248,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wo1-OG-JZq">
+                                <rect key="frame" x="113" y="468" width="95" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Voltar"/>
+                                <connections>
+                                    <action selector="closeMap:" destination="SJJ-DC-dr6" eventType="touchUpInside" id="kaJ-zp-4jt"/>
+                                    <action selector="doneAction:" destination="2qU-Hk-czx" eventType="touchUpInside" id="jov-bx-VDc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="labelLocalizacao" destination="xhA-5c-aoZ" id="j10-oq-yVQ"/>
                         <outlet property="pickerView" destination="b1g-yp-6Kh" id="NXh-wW-yX1"/>
+                        <outlet property="switchLocalizacao" destination="wqX-8Y-5pH" id="KrH-oP-LTo"/>
                         <outlet property="txtFieldTarefa" destination="yYG-mF-97F" id="bwm-8l-hEI"/>
+                        <outlet property="voltarButton" destination="Wo1-OG-JZq" id="SVR-oj-cE2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1n-2V-Ne0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -444,7 +460,19 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ilU-5I-kvC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2qU-Hk-czx" id="QgS-lu-sI9"/>
+                                </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hII-ko-8DA">
+                                <rect key="frame" x="113" y="493" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Concluído"/>
+                                <connections>
+                                    <action selector="doneAction:" destination="2qU-Hk-czx" eventType="touchUpInside" id="2Mw-eF-WR0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
